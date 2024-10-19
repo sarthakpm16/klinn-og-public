@@ -1,0 +1,499 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: black;
+    color: white;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Typography */
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin: 1.5vh 0;
+    font-weight: 300;
+  }
+  
+  /* Form Styles */
+  .form {
+    width: 100%;
+    max-width: 600px;
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+  }
+  
+  .form input[type="text"],
+  .form input[type="number"],
+  .form input[type="email"],
+  .form textarea,
+  .form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+  }
+  
+  .form input[type="submit"] {
+    background: rgb(58, 58, 58);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+  }
+  
+  .form input[type="submit"]:hover {
+    background:black;
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Testimonial Box */
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Checkbox and Label Alignment */
+  label {
+    font-size: 0.9rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+  }
+  
+  input[type="checkbox"] {
+    margin: 0;
+    margin-right: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(180deg, rgb(255,255,255), rgb(186, 177, 177));
+    ;
+    color: black;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: auto;
+  }
+  
+  footer h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  footer h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1920px) {
+    main {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    .form {
+      padding: 15px;
+      max-width: 90%;
+    }
+  
+    footer h2 {
+      font-size: 1.4rem;
+    }
+  
+    footer h3 {
+      font-size: 1rem;
+    }
+  
+    .social img {
+      width: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .form {
+      padding: 10px;
+      max-width: 95%;
+    }
+  
+    footer h2 {
+      font-size: 1.2rem;
+    }
+  
+    footer h3 {
+      font-size: 0.9rem;
+    }
+  
+    .social img {
+      width: 35px;
+    }
+
+    .form {
+      padding: 10px;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  
+    .form input[type="text"],
+    .form input[type="number"],
+    .form input[type="email"],
+    .form textarea,
+    .form input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 1rem;
+      font-family: 'Rubik', sans-serif;
+      font-weight: bold;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    footer h2 {
+      font-size: 1rem;
+    }
+  
+    footer h3 {
+      font-size: 1.1rem;
+    }
+  
+    .social img {
+      width: 30px;
+    }
+  }
+  
+  
+  /* Instagram Handle Styling */
+  #instahandle {
+    position: relative;
+    color: black;
+  }
+  
+  #instahandle::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: green;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  #instahandle:hover {
+    color: green;
+  }
+  
+  #instahandle:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* Social Media Section */
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social img {
+    margin-right: 15px;
+    size: 40px; /*basesize for instagram logo*/
+    transition: transform 0.2s ease;
+  }
+  
+  .social img:hover {
+    transform: scale(1.2);
+  }
+  
+  a h2 {
+    color: black;
+    text-decoration: none;
+  }
+  
+  h3:hover, h2:hover, h1:hover {
+    cursor: default;
+  }
+  
+  footer h2:hover {
+    cursor: pointer;
+  }
+  
+  .content label {
+    color: black;
+  }
+  
+  #submit {
+    font-family: 'Trebuchet', 'Rubik';
+    font-weight: bold;
+  }
+  
+  #name::placeholder, #clinic::placeholder, #age::placeholder, #email::placeholder, #testimonial::placeholder, #school::placeholder {
+    color: black;
+    font-family: 'Rubik', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .nonfootertext {
+    font-weight: bold;
+    letter-spacing: 0.02rem;
+  }
+  
+  .form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: whitesmoke;
+    position: relative;
+    margin-top: auto;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .nav-left, .nav-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-bottom-width: 0;
+    transition: background-color 0.3s, color 0.3s;
+    pointer-events: auto; /* Ensure the entire box is interactable */
+  }
+  
+  .nav-left {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+  }
+  
+  .nav-right {
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 769px) {
+    .navbar {
+      height: 70px;
+    }
+  
+    .nav-right {
+      font-size: 3.5vw;
+      padding: 20px 0;
+    }
+  
+    .nav-left {
+      font-size: 4vw;
+      padding: 20px 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      height: 70px;
+    }
+  
+    .nav-right {
+      font-size: 4vw;
+      padding: 15px 0;
+    }
+  
+    .nav-left {
+      font-size: 5vw;
+      padding: 15px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      height: 80px;
+    }
+  
+    .nav-right {
+      font-size: 5vw;
+      padding: 20px 0;
+    }
+  
+    .nav-left {
+      font-size: 6vw;
+      padding: 20px 0;
+    }
+  }
+  
+  .nav-left:hover, .nav-right:hover {
+    background-color: rgba(26, 26, 26, 0.6);
+    height: 100%;
+  }
+  
+  
+  @media (min-resolution: 2dppx) {
+  
+    .nonfootertext {
+      font-size: 2rem;
+      margin: 1rem;
+      letter-spacing: .1rem;
+    }
+  
+    .form {
+      height: 72rem;
+      justify-content:space-around;
+    }
+  
+    .navbar {
+      height: 15rem;
+    }
+  
+    .nav-left:hover, .nav-right:hover {
+      background-color: rgba(26, 26, 26, 0.6);
+      height: 15rem;;
+    }
+  
+    h1 {
+      font-size: 5rem;
+    }
+  
+    footer {
+      height: 20rem;
+      margin-top: auto;
+    }
+  
+    footer h3 {
+      font-size: 3rem;
+    }
+  
+    footer h2 {
+      font-size: 2rem;
+    }
+  
+    .social img {
+      transform:scale(2);
+      margin-right: 50px;
+    }
+  
+    #terms {
+      font-size: 1.5rem;
+    }
+  
+    #agreement {
+      transform: scale(3)
+    }
+  
+    #submit {
+      height: 5rem;
+      font-size: 2.25rem;
+    }
+  
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+    }
+  
+    .checkbox-container input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    #agreement {
+      transform: translateY(50px);
+    }
+  
+    .checkbox-container label {
+      margin: 0;
+    }
+  
+    #terms {
+      font-size: 1.2rem;
+    }
+  
+    input[type="text"], input[type="email"], input[type="number"] {
+      height:5rem;
+      align-items: center;
+      display:flex;
+    }
+  
+    textarea {
+      height: 8rem;
+    }
+  
+    #name::placeholder, #clinic::placeholder, #age::placeholder, #email::placeholder, #school::placeholder {
+      font-weight:bold;
+      font-size: 1.5rem;
+      transform: translateY(.25rem);
+    }
+  
+    #testimonial::placeholder {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  
+  }

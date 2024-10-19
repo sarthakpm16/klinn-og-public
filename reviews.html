@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="reviews.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet"> 
+    <title>Klinn Testimonials</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-left">Klinn</a>
+        <a href="reviews.html" class="nav-right">Testimonials</a>
+    </nav>
+<main>
+    <h1>Klinn Testimonials</h1>
+    <h2 class="nonfootertext">See what our users have to say about Klinn!</h2>
+    <h2 class="nonfootertext">Fill out a testimonial:</h2>
+    <div class="content">
+    <br>   
+            <form id="form" action="/submit-form" method="post" class="form" onsubmit="return validateForm()">
+            <input type="text" id="name" name="name" placeholder="First and Last Name" required>
+            <input type="number" id="age" name="age" placeholder="Age" max="99" required>
+            <input type="email" id="email" name="email" placeholder="Personal Email Address" required>
+            <input type="text" id="clinic" name="clinic" placeholder="Clinic Found Through Klinn" required>
+            <input type="text" id="school" name="school" placeholder="College/University (if applicable)">
+            <textarea id="testimonial" name="testimonial" placeholder="How Has Klinn Helped You?" required></textarea>
+          <div class="checkbox-container">
+            <label id="terms"> By submitting this form you agree to your review, message or testimonial to be posted along with your first name, age, college/university (if applicable), and the clinic that Klinn helped you get a role at to be publicly posted on the Klinn website, social medias, and other platforms. Submitting the form gives us permission to post this info, but we might decide to leave certian submissions or details from being posted.
+                <input type="checkbox"  id="agreement" name="agreement" required>
+            </label>
+          </div>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+</main>
+<footer>
+    <h3 id="findus">Find Us:</h3>
+    <div class="social">
+        <a href="https://www.instagram.com/klinn.works">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Logo-instagram-1.png" alt="Instagram Logo">
+        </a>
+        <a style="text-decoration: none;" href="https://www.instagram.com/klinn.works">
+            <h2 id="instahandle">Instagram: @klinn.works</h2>
+        </a>
+    </div>
+</footer>
+<script>
+function validateForm() {
+    var name = document.getElementById('name').value;
+    var nameParts = name.trim().split(' ');
+    if (nameParts.length < 2) {
+        alert("Please enter your full name (first and last name).");
+        return false;
+    }
+    return true;
+}
+</script>
+</body>
+</html>
+  
